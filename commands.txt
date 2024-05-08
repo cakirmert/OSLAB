@@ -1,0 +1,5 @@
+gcc ab.c -o ab && ./ab
+gcc prime.c -o prime && ./prime
+renice -n <nice_value> -p <PID>
+//nice value between -20-19 pid is obtained with ps
+ps -e or ps -a
