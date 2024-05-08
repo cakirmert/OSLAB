@@ -7,9 +7,9 @@ void childProcess(char character) {
     while(1) {
         putchar(character);
         fflush(stdout); // Flush the output buffer to ensure characters are immediately displayed, 
-	// otherwise they will not appear until the buffer is full or newline is encountered, since
-	// we have no newline and we want to display immediately, we use this. 
-        usleep(1); // Sleep for 1 milliseconds
+        // otherwise they will not appear until the buffer is full or newline is encountered, since
+        // we have no newline and we want to display immediately, we use this. 
+        usleep(1000); // Sleep for 1 milliseconds (1000 microseconds)
     }
 }
 
@@ -43,7 +43,7 @@ int main() {
     // Parent process waits for both child processes to terminate
     wait(NULL); // Include this line to wait for the first child process
     wait(NULL); // Include this line to wait for the second child process
-
+    //since they wont quit maybe one wait function is also enough?
     return 0;
 }
 
